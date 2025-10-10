@@ -1,5 +1,6 @@
 package github.io.hugobezerra.cronometrogigante
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -27,10 +28,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         tvTimer = findViewById(R.id.tvTimer)
         val btnStart = findViewById<Button>(R.id.btnStart)
         val btnStop = findViewById<Button>(R.id.btnStop)
         val btnReset = findViewById<Button>(R.id.btnReset)
+        val btnSobre = findViewById<Button>(R.id.btnSobre) // <- botão Sobre
 
         handler = Handler(Looper.getMainLooper())
 
@@ -49,6 +52,12 @@ class MainActivity : AppCompatActivity() {
             isRunning = false
             timer = 0
             updateTimerText()
+        }
+
+        // Botão Sobre
+        btnSobre.setOnClickListener {
+            val intent = Intent(this, SobreActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -70,6 +79,5 @@ class MainActivity : AppCompatActivity() {
         val minutes = (timer % 3600) / 60
         val seconds = (timer % 60)
         tvTimer.text = String.format("%02d:%02d:%02d", hours, minutes, seconds)
-
     }
 }
