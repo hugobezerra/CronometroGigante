@@ -12,20 +12,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="00:00:00"
-        android:textSize="10vw"
+        android:textSize="70sp"
         android:gravity="center"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="30sp"
+        android:autoSizeMaxTextSize="120sp"
+        android:autoSizeStepGranularity="2sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineButtons"
-        app:layout_constraintVertical_bias="0.4" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineButtons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintVertical_bias="0.3" />
 
     <Button
         android:id="@+id/btnStart"
@@ -34,7 +31,7 @@
         android:text="Iniciar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnStop"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineButtons"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer"
         app:layout_constraintHorizontal_weight="1"/>
 
     <Button
@@ -44,7 +41,7 @@
         android:text="Parar"
         app:layout_constraintStart_toEndOf="@+id/btnStart"
         app:layout_constraintEnd_toStartOf="@+id/btnReset"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineButtons"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer"
         app:layout_constraintHorizontal_weight="1"/>
 
     <Button
@@ -54,7 +51,7 @@
         android:text="Zerar"
         app:layout_constraintStart_toEndOf="@+id/btnStop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineButtons"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer"
         app:layout_constraintHorizontal_weight="1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
