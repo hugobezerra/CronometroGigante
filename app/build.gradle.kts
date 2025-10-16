@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "github.io.hugobezerra.cronometrogigante"
+    namespace = "github.io.hugobezerra.cronometrosimplesegrande"
     compileSdk = 36
 
     defaultConfig {
