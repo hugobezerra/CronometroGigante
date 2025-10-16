@@ -8,7 +8,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "github.io.hugobezerra.cronometrogigante"
+        applicationId = "github.io.hugobezerra.cronometrosimplesegrande"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
