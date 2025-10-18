@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CronometroGigante"
+rootProject.name = "CronometroSimpleseGrande"
 include(":app")
